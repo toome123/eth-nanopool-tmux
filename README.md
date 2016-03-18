@@ -53,5 +53,6 @@ Simply execute it as a bash script:
 $ bash ./start-mining
 ```
 
+## Donations
 
--
+If you want to thank me for my work, you can send some Ether here: `0x4521B733c91b517F6bCed1bEa5f9e02Fa1AFbaa6` :)
