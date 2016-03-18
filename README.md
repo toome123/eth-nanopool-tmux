@@ -1,5 +1,7 @@
 # Ethereum mining @ nanopool.org tmux session
 
+![](https://raw.githubusercontent.com/gsora/eth-nanopool-tmux/master/session-screenshot.png)
+
 This repository contains a tmux session built expressly for CUDA (NVidia) Ethereum mining on nanopool.org.
 
 Can be adapted easily to OpenCL, removing the `nvidia-smi` pane.
