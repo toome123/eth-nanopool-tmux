@@ -12,7 +12,7 @@ tmux split-window
 tmux split-window -h
 tmux split-window -t 0 -h
 
-tmux send-keys -t 0 "$MINER_PATH" enter
+tmux send-keys -t 0 "cd $MINER_PATH" enter
 tmux send-keys -t 0 "./mine.sh" C-m
 tmux send-keys -t 2 'htop' enter
 tmux send-keys -t 3 "watch ./nanopool-mon.py $ETH_ADDRESS" enter
