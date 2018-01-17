@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ETH_ADDRESS="0xe13fb0b673cb6bd58f1307c0a1fae3ae91b9b629"
-MINER_PATH="./ethminer-cuda"
-MINER_NAME="gs1"
+ETH_ADDRESS="0x4e1350db1c426ddec75f78b18cd7e96cce4dc2c4"
+MINER_PATH="/usr/local/claymore95/"
+MINER_NAME="mining_rig_main"
 MINER_PARAMS="-U -v 9 -F http://eth1.nanopool.org:8888/$ETH_ADDRESS/$MINER_NAME"
 
 tmux new-session -d
@@ -12,8 +12,8 @@ tmux split-window
 tmux split-window -h
 tmux split-window -t 0 -h
 
-tmux send-keys -t 0 "$MINER_PATH $MINER_PARAMS" enter
-tmux send-keys -t 1 'watch nvidia-smi' enter
+tmux send-keys -t 0 "$MINER_PATH" enter
+tmux send-keys -t 0 "./mine.sh" C-m
 tmux send-keys -t 2 'htop' enter
 tmux send-keys -t 3 "watch ./nanopool-mon.py $ETH_ADDRESS" enter
 
